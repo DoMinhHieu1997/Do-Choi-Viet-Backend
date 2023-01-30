@@ -30,6 +30,7 @@ router.get("/detail/:id", async (req, res) => {
 
 //get random products
 router.get("/suggestions", async(req, res) => {
+    console.log(123);
     try {
         const randomProducts = await ProductCtrl.getRandomProducts(req.body.id);
         res.json(randomProducts);
