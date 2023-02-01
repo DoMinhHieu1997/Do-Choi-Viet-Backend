@@ -35,8 +35,8 @@ router.get("/suggestions", async(req, res) => {
         const randomProducts = await ProductCtrl.getRandomProducts(req.body.id);
         res.json(randomProducts);
     } catch (err) {
-        console.log(err);
-        res.json(responseMessage("error",1,''));
+        console.log('err',err);
+        res.json(responseMessage("error",1,'test'));
     }
 });
 
