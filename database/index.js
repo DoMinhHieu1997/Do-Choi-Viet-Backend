@@ -2,8 +2,7 @@ const { MongoClient } = require("mongodb");
 
 const db = {};
 const connectToDb = async () => {
-    // const client = new MongoClient("mongodb+srv://admin:admin123@cluster0.j9yngv5.mongodb.net/?retryWrites=true&w=majority");
-    const client = new MongoClient("mongodb+srv://admin:admin123@cluster0.9boekl8.mongodb.net/webshop?retryWrites=true&w=majority");
+    const client = new MongoClient("mongodb+srv://admin:admin123@cluster0.j9yngv5.mongodb.net/?retryWrites=true&w=majority");
     await client.connect(() => {
         console.log("Mongodb connected");
         const database = client.db("do_choi_viet");
